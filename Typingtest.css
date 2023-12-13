@@ -1,0 +1,157 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(114, 121, 124);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  /* align-items: center; */
+}
+/* Style the dropdown container */
+.option {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style the dropdown arrow/icon */
+.option::after {
+  content: '\25BC'; /* Unicode character for a downward-pointing triangle/arrow */
+  font-size: 16px; /* Adjust the size of the arrow */
+  position: absolute;
+  top: 32%;
+  right: 18px;
+  transform: translateY(-50%);
+  pointer-events: none; /* Make sure the arrow doesn't interfere with dropdown interaction */
+}
+
+/* Style the dropdown menu */
+select {
+  appearance: none; /* Remove default styles on some browsers */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Add some styles when the dropdown is open */
+select:focus {
+  outline: none;
+  border-color: #4CAF50; /* Change the border color when the dropdown is focused */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Add a subtle box shadow */
+}
+
+
+/* ========================================== */
+.mainbox {
+  height: 85vh;
+  width: 70vw;
+  background-color: linear-gradient(180deg, #ffffff1f 0%, #ffffff59 100%) 0 0%
+    padding-box;
+  border: 1px solid white;
+  background-image: url("pic/center-back.svg");
+  border-top: none;
+  border-end-start-radius: 10px;
+  border-end-end-radius: 10px;
+  /* border: 2px solid yellow; */
+}
+
+.heading {
+  height: 20vh;
+  width: 70vw;
+  margin-top: 6rem;
+  align-items: center;
+  /* border: 2px solid yellow; */
+  text-align: center;
+  align-items: center;
+  color: white;
+}
+
+.heading h1 {
+  font-size: 40px;
+  font-family: Flexo-BoldIt, Arial, Tahoma, sans-serif;
+  /* margin: 0px 0 10px 0; */
+}
+
+.heading p {
+  font-size: 25px;
+}
+
+.threeBox {
+  width: 80vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+}
+
+.girlpic {
+  width: 10vw;
+  height: 48vh;
+  /* border: 2px solid red; */
+}
+
+.Options {
+  width: 40vw;
+  height: 50vh;
+  text-align: center;
+  position: relative;
+}
+
+.boypic {
+  width: 20vw;
+  height: 50vh;
+  margin-top: 3rem;
+  /* border: 2px solid green; */
+}
+
+.Options .para {
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.icon-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-option .icon i {
+  margin-top: -21px;
+  font-size: 45px;
+}
+
+.option select {
+  margin-left: 10px;
+  margin-bottom: 2rem;
+  width: 23rem;
+  height: 50px;
+  padding: 10px;
+  border-radius: 30px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+}
+
+.button button {
+  width: 8rem;
+  height: 3rem;
+  align-items: center;
+  text-align: center;
+  margin-left: 3.5rem;
+  border-radius: 30px;
+  color: white;
+  background-color: rgb(21, 195, 154);
+  /* border: none; */
+  border: 1px solid white;
+}
+
+.button button:hover {
+  transform: scale(1.2);
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <title>Typing Test</title>
+    <style>
+      body {
+        height: 100vh;
+        width: 100vw;
+        background-color: rgb(114, 121, 124);
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+       
+      }
+      .container {
+        height: 86vh;
+        width: 70vw;
+        background-color: linear-gradient(180deg, #ffffff1f 0%, #ffffff59 100%)
+          0 0% padding-box;
+        border: 2px solid #5ec0d3;
+        border-top: none;
+        border-end-start-radius: 10px;
+        border-end-end-radius: 10px;
+      }
+      #timeclose {
+        height: 10vh;
+        width: 70vw;
+        display: flex;
+        justify-content: space-around;
+        color: #5ec0d3;
+        font-size: x-large;
+        margin-top: 8px;
+        border-bottom: 2px solid #5ec0d3;
+      }
+      #timeclose a {
+        text-decoration: none;
+        color: #5ec0d3;
+      }
+      .showSentence {
+        color: whitesmoke;
+        font-size: 30px;
+        width: 75%;
+        max-height: 15rem;
+        /* display: flex; */
+        justify-content: center;
+        margin-top: 1rem;
+        margin-left: 6rem;
+        letter-spacing: 4px;
+        word-wrap: break-word;
+        line-height: 1.1;
+      }
+      #textarea {
+        border: none;
+        max-height: 180px;
+        width: 47rem;
+        margin-left: 3.7rem;
+        padding: 17px;
+        outline: none;
+        resize: none;
+        background-color: #ffffff1f;
+        font-size: 30px;
+        color: white;
+        overflow: hidden;
+        caret-color: blue;
+        word-wrap: break-word;
+
+      }
+      .active {
+        color: blue;
+      }
+      .correct {
+        color: green;
+      }
+      .incorrect {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="timeclose">
+        <span></span>
+        <span></span>
+        <a href="http://127.0.0.1:5500/TypingTest/ResultPage.html"
+          ><span>CLOSE <i class="fa-solid fa-circle-xmark"></i></span
+        ></a>
+      </div>
+      <div class="content-wrapper">
+        <div class="showSentence" id="showSentence">
+          <p></p>
+        </div>
+        <textarea
+          name="textarea "
+          placeholder="Start typing..."
+          id="textarea"
+          cols="108"
+          rows="15"
+        ></textarea>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="javascript.js"></script>
+</html>

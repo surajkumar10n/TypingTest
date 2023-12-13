@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Test</title>
+    <link rel="stylesheet" href="Typingtest.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <script>
+      const startTest = () => {
+        let time = document.getElementById("dropdown").value;
+        let text = document.getElementById("dropdown2").value;
+        localStorage.setItem("Time", time);
+        localStorage.setItem("Text", text);
+      };
+
+      // function resetGame() {
+      //     loadParagraph();
+      //     clearInterval(timer);
+      //     timeLeft = maxTime;
+      //     charIndex = mistakes = isTyping = 0;
+      //     inpField.value = "";
+      //     timeTag.innerText = timeLeft;
+      //     wpmTag.innerText = 0;
+      //     mistakeTag.innerText = 0;
+      //     cpmTag.innerText = 0;
+      //   }
+      // tryAgainBtn.addEventListener("click", resetGame);
+    </script>
+  </head>
+
+  <body>
+    <div class="mainbox">
+      <div class="heading">
+        <h1>Check your typing skills in a minute</h1>
+        <br />
+        <p>Type away to join 150+ million test takers!</p>
+      </div>
+      <div class="threeBox">
+        <div class="girlpic">
+          <img src="pic/lady.svg" alt="" />
+        </div>
+        <div class="Options">
+          <div class="para">
+            <p>SELECT YOUR TEST</p>
+          </div>
+          <div class="icon-option">
+            <div class="icon">
+              <i class="fa-regular fa-clock" style="color: #ffffff"></i>
+            </div>
+            <div class="option">
+              <label for="dropdown"></label>
+              <select name="" id="dropdown">
+                <option value="1">1 Minute Test</option>
+                <option value="2">2 Minute Test</option>
+                <option value="3">3 Minute Test</option>
+                <!-- <option value="5">5 Minute Test</option> -->
+              </select>
+            </div>
+          </div>
+          <div class="icon-option">
+            <div class="icon">
+              <i class="fa-sharp fa-regular fa-file" style="color: #f5f7f9"></i>
+            </div>
+            <div class="option">
+              <label for="dropdown2"></label>
+              <select name="" id="dropdown2">
+                <option value="Easy">Easy Text</option>
+                <option value="Medium">Medium Text</option>
+                <option value="Hard">Hard Text</option>
+              </select>
+            </div>
+          </div>
+          <div class="button">
+            <a href="http://127.0.0.1:5500/TypingTest/TypingTestProject2.html"
+              ><button onclick="startTest()">START TEST</button></a
+            >
+          </div>
+        </div>
+        <div class="boypic">
+          <img src="pic/gentleman.svg" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
