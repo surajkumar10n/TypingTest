@@ -128,7 +128,7 @@ function initTimer() {
     localStorage.setItem("Accuracy", Accuracy);
     localStorage.setItem("NetSpeed", NetSpeed);
   } else {
-    window.location.href = "http://127.0.0.1:5500/TypingTest/ResultPage.html";
+    window.location.href = "ResultPage.html";
     clearInterval(timer);
   }
 }
