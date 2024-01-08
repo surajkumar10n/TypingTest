@@ -93,7 +93,7 @@ function initTyping() {
           totalCorrectCharacters++;
         } else {
           mistakes++;
-          console.log("mistakes", mistakes);
+          // console.log("mistakes", mistakes);
           characters[charIndex].classList.add("incorrect");
         }
         charIndex++;
