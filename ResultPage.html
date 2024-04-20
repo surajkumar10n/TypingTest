@@ -7,6 +7,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+
     <title>Result</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Poppins:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap");
@@ -21,7 +23,7 @@
         background-color: #707779;
       }
       .main-box {
-        height: 92vh;
+        height: 90vh;
         width: 70%;
         background-color: #707779;
         margin-top: 1rem;
@@ -30,7 +32,7 @@
         border-radius: 15px;
       }
       .upper-part {
-        height: 10%;
+        height: 8%;
         width: 80%;
         display: flex;
         justify-content: space-around;
@@ -38,21 +40,21 @@
         background-color: #707779;
         /* border: 1px solid white; */
         margin-left: 6rem;
-        margin-top: 2rem;
+        margin-top: 1rem;
       }
       .icon {
         display: flex;
       }
       .icon i {
-        font-size: 49px;
+        font-size: 47px;
         color: white;
       }
       .icon h3 {
-        font-size: 40px;
+        font-size: 38px;
         color: white;
       }
       .button button {
-        height: 45px;
+        height: 43px;
         width: 170px;
         font-size: larger;
         background-color: #15c39a;
@@ -64,7 +66,7 @@
       .circles {
         height: 25vh;
         width: 55vw;
-        margin-top: 4rem;
+        margin-top: 2rem;
         margin-left: 5rem;
         /* background-color: yellow; */
         display: flex;
@@ -74,45 +76,45 @@
       .first,
       .second,
       .third {
-        height: 150px;
-        width: 150px;
+        height: 120px;
+        width: 120px;
         border-radius: 50%;
         color: blue;
-        border: 4px solid #04b2d5;
+        border: 3px solid #04b2d5;
       }
       .third {
         border: 4px solid #15c39a;
       }
       .first p {
-        font-size: 40px;
-        font-weight: 700;
+        font-size: 28px;
+        font-weight: 600;
         color: white;
-        margin-left: 3.5rem;
-        margin-top: 2rem;
+        margin-left: 2.6rem;
+        margin-top: 2.1rem;
       }
       .first p:nth-child(2) {
-        font-size: 20px;
+        font-size: 15px;
         margin-top: 9px;
-        margin-left: 47px;
+        margin-left: 1.9rem;
       }
       .second p {
-        font-size: 40px;
-        font-weight: 700;
+        font-size: 28px;
+        font-weight: 600;
         color: white;
-        margin-left: 3rem;
-        margin-top: 2.6rem;
+        margin-left: 2rem;
+        margin-top: 2.5rem;
       }
       .third p {
-        font-size: 40px;
-        font-weight: 700;
+        font-size: 28px;
+        font-weight: 600;
         color: white;
-        margin-left: 3.6rem;
-        margin-top: 1.9rem;
+        margin-left: 2.5rem;
+        margin-top: 2rem;
       }
       .third p:nth-child(2) {
-        font-size: 20px;
+        font-size: 15px;
         margin-top: 9px;
-        margin-left: 47px;
+        margin-left: 2rem;
       }
       .multiply {
         font-size: 40px;
@@ -124,21 +126,40 @@
       }
       .heading {
         width: 66vw;
-        height: 10vh;
+        height: 8vh;
         display: flex;
         justify-content: space-around;
-        font-size: x-large;
+        font-size: large;
         /* color:#04B2D5; */
-        margin-top: 1rem;
+        margin-left: 0.4rem;
         color: white;
+        /* background-color: yellow; */
+      }
+      .heading p:nth-child(2) {
+        /* margin-left: 11vw; */
+      }
+      .chart {
+        border: 1px solid white;
+        height: 223px;
+        width: 500px;
+        margin-left: 10vw;
+        /* background-color: yellow; */
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 10px;
+      }
+      #mychart {
+        height: 250px;
+        width: 300px;
+        /* background-color: blue; */
       }
       .copyright {
         color: white;
         margin-top: 5px;
         margin-left: 34rem;
       }
-      .copyright span{
-        color: blue ;
+      .copyright span {
+        color: blue;
       }
     </style>
   </head>
@@ -152,9 +173,7 @@
         </div>
         <div class="text"></div>
         <div class="button">
-          <a href="Index.html"
-            ><button>RETAKE TEST</button></a
-          >
+          <a href="Index.html"><button>RETAKE TEST</button></a>
           <!-- <button>RETAKE TEST</button> -->
         </div>
       </div>
@@ -180,17 +199,28 @@
       <div class="heading">
         <p>Typing Speed</p>
         <p>Accuracy</p>
-        <p>Net Speed</p>
+        <p>&nbsp; &nbsp; &nbsp;&nbsp;Net Speed</p>
       </div>
+      <!-- <div class="chart">
+        <canvas id="mychart"> </canvas>
+      </div> -->
     </div>
     <div class="copyright">
-      <p>Copyright &copy; 2023 <a href="https://www.linkedin.com/in/suraj-kumar-8b8237183/"><span>Suraj Kumar</span></a></p>
+      <p>
+        Copyright &copy; 2023
+        <a href="https://www.linkedin.com/in/suraj-kumar-8b8237183/"
+          ><span>Suraj Kumar</span></a
+        >
+      </p>
     </div>
   </body>
   <script>
+   
+
     var firstCircle = document.querySelector(".first");
     var firstP = firstCircle.querySelector("p");
     firstP.innerHTML = localStorage.getItem("wpm");
+    let wpm=localStorage.getItem("wpm")
 
     var secondCircle = document.querySelector(".second");
     var secondP = secondCircle.querySelector("p");
@@ -199,6 +229,47 @@
     var thirdCircle = document.querySelector(".third");
     var thirdP = thirdCircle.querySelector("p");
     thirdP.innerHTML = Math.round(localStorage.getItem("NetSpeed"));
+
+    let mychart = document.getElementById("mychart").getContext("2d");
+
+    let speedchart = new Chart(mychart, {
+      type: "bar", //bar, horizontalbAr,pie,line,goughnut,radar
+      data: {
+        labels: ["gaya","patna"],
+        datasets: [
+          {
+            label: "",
+            data: [wpm,30],
+            backgroundColor: "aqua",
+            borderWidth: 2,
+            borderColor: "grey",
+            hoverBorderWidth: 2,
+            hoverBorderColor: "black",
+          },
+        ],
+      },
+      options: {
+        title: {
+          display: true,
+          text: "",
+        },
+        legend: {
+          display: false,
+          position: "hidden",
+        },
+        layout: {
+          padding: {
+            left: 50,
+            right: 0,
+            bottom: 0,
+            top: 0,
+          },
+        },
+        tooltips: {
+          enabled: true,
+        },
+      },
+    });
   </script>
 
   <!-- <script src="javascript.js"></script> -->

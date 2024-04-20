@@ -11,7 +11,6 @@ body {
   display: flex;
   justify-content: center;
   overflow: hidden;
-  /* align-items: center; */
 }
 /* Style the dropdown container */
 .option {
@@ -24,7 +23,7 @@ body {
   content: '\25BC'; /* Unicode character for a downward-pointing triangle/arrow */
   font-size: 16px; /* Adjust the size of the arrow */
   position: absolute;
-  top: 32%;
+  top: 56%;
   right: 18px;
   transform: translateY(-50%);
   pointer-events: none; /* Make sure the arrow doesn't interfere with dropdown interaction */
@@ -51,8 +50,9 @@ select:focus {
 
 /* ========================================== */
 .mainbox {
-  height: 85vh;
+  height: 90vh;
   width: 70vw;
+  max-width: 100%;
   background-color: linear-gradient(180deg, #ffffff1f 0%, #ffffff59 100%) 0 0%
     padding-box;
   border: 1px solid white;
@@ -60,13 +60,23 @@ select:focus {
   border-top: none;
   border-end-start-radius: 10px;
   border-end-end-radius: 10px;
-  /* border: 2px solid yellow; */
+  box-sizing: border-box;
 }
+.ad{
+  height: 15vh;
+  width: 95%;
+  margin: 1rem;
+}
+.ad img{
+  max-width: 100%; 
+  height: auto; 
+  display: block; 
+  margin: 0 auto; 
 
+}
 .heading {
   height: 20vh;
   width: 70vw;
-  margin-top: 6rem;
   align-items: center;
   /* border: 2px solid yellow; */
   text-align: center;
@@ -75,7 +85,7 @@ select:focus {
 }
 
 .heading h1 {
-  font-size: 40px;
+  font-size: 2rem;
   font-family: Flexo-BoldIt, Arial, Tahoma, sans-serif;
   /* margin: 0px 0 10px 0; */
 }
@@ -85,10 +95,11 @@ select:focus {
 }
 
 .threeBox {
-  width: 80vw;
-  height: 70vh;
+  width: 70vw;
+  height: 50vh;
   display: flex;
   justify-content: center;
+  /* border: 2px solid yellow; */
 }
 
 .girlpic {
@@ -105,10 +116,12 @@ select:focus {
 }
 
 .boypic {
-  width: 20vw;
-  height: 50vh;
-  margin-top: 3rem;
-  /* border: 2px solid green; */
+  text-align: center;
+  margin-top: 20px;
+}
+
+.boypic img {
+  max-width: 100%;
 }
 
 .Options .para {
@@ -118,40 +131,86 @@ select:focus {
 
 .icon-option {
   display: flex;
-  justify-content: center;
   align-items: center;
+  margin-bottom: 15px;
+}
+.icon {
+  flex: 0 0 16%;
 }
 
 .icon-option .icon i {
-  margin-top: -21px;
-  font-size: 45px;
+  /* margin-top: -21px; */
+  font-size: 2rem;
 }
-
+.option {
+  flex: 0 0 80%;
+}
 .option select {
-  margin-left: 10px;
-  margin-bottom: 2rem;
-  width: 23rem;
-  height: 50px;
+  width: 100%;
   padding: 10px;
-  border-radius: 30px;
-  font-size: 20px;
-  border: none;
-  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f5f7f9;
+  font-size: 16px;
+  appearance: none;
 }
 
 .button button {
-  width: 8rem;
-  height: 3rem;
-  align-items: center;
-  text-align: center;
-  margin-left: 3.5rem;
-  border-radius: 30px;
-  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
   background-color: rgb(21, 195, 154);
-  /* border: none; */
-  border: 1px solid white;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .button button:hover {
   transform: scale(1.2);
+}
+
+
+
+@media (max-width: 777px) {
+  .mainbox {
+    padding: 10px;
+  }
+
+  .heading h1 {
+    font-size: 20px;
+  }
+
+  .heading p {
+    font-size: 15px;
+  }
+  .Options .para {
+    color: white;
+    margin-bottom: 0.6rem;
+  }
+  .girlpic {
+    width: 15vw;
+    height: 40vh;
+  }
+  .girlpic img{
+    max-width: 98%;
+  }
+  .boypic {
+    /* width: 15vw;
+    height: 40vh; */
+    text-align: center;
+    margin-top: 20px;
+  }
+  .boypic img {
+    max-width: 98%;
+  }
+
+  .option select {
+    width: 100%;
+    margin-top: 2px;
+  }
+
+  .button {
+    text-align: center;
+    margin-top: 12px;
+  }
 }

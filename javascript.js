@@ -29,6 +29,17 @@ localStorage.setItem("EASY", JSON.stringify(EASY));
 localStorage.setItem("MEDIUM", JSON.stringify(MEDIUM));
 localStorage.setItem("HARD", JSON.stringify(HARD));
 
+var currentDate = new Date();
+
+// Get the various components of the date and time
+var year = currentDate.getFullYear();
+var month = currentDate.getMonth() + 1; // Month is zero-based, so we add 1
+var day = currentDate.getDate();
+var hours = currentDate.getHours();
+var minutes = currentDate.getMinutes();
+var dateTimeString = currentDate.toLocaleString();
+console.log(dateTimeString);
+
 const typingText = document.querySelector(".showSentence p");
 const inpField = document.getElementById("textarea");
 
@@ -124,10 +135,13 @@ function initTimer() {
     let Accuracy =
       (totalCorrectCharacters / (totalCorrectCharacters + mistakes)) * 100;
     let NetSpeed = wpm * (Accuracy / 100);
+
     localStorage.setItem("wpm", wpm);
     localStorage.setItem("Accuracy", Accuracy);
     localStorage.setItem("NetSpeed", NetSpeed);
+    
   } else {
+   
     window.location.href = "ResultPage.html";
     clearInterval(timer);
   }
